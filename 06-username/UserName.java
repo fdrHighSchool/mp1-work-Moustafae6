@@ -40,8 +40,18 @@ public class UserName {
   public static String generatePassword(int length){
       String password = "";
          for (int i = 0; i<length;i++){
-           Random r= new Random ();
-           int num1 = r.newInt();
+            int random1 = (int)(Math.random()*(122-97+1)+97);
+            int random2 = (int)(Math.random()*(90-65+1)+65);
+            int random3 = (int)(Math.random()*(57-48+1)+48);
+            int random4 = (int)(Math.random()*(47-35+1)+35);
+            char c1 =(char) random1 ;
+            char c2 =(char) random2 ;
+            char c3=(char) random3 ;
+            char c4 =(char) random4 ;
+             password+= c1+ c2 +c3+c4;
+            System.out.println("Your password is "+password);
+           
+           
          }
          return password;
   }
